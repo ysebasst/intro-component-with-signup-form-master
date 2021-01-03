@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --Red: rgb(255, 122, 122);
+  --Green: rgb(56, 204, 140);
+  --Blue: rgb(96, 85, 165);
+  --DarkBlue: rgb(62, 60, 73);
+  --GrayishBlue: rgb(185, 182, 211);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Red);
+  background-image: url("../images/bg-intro-mobile.png");
+}
+
+.container {
+  max-width: 375px;
+  padding: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1110px;
+    padding: 0rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+
+.info {
+  color: white;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.info h1 {
+  font-size: 1.75rem;
+  margin: 1.5rem 0;
+}
+.info p {
+  line-height: 1.5em;
+}
+
+.form h2 {
+  background-color: var(--Blue);
+  color: white;
+  padding: 1.25rem 20%;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  box-shadow: 0px 8px rgba(0, 0, 0, 0.2);
+}
+.form h2 span {
+  font-weight: 600;
+}
+.form form {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1rem;
+  box-shadow: 0px 8px rgba(0, 0, 0, 0.2);
+}
+.form form input {
+  padding: 18px 1rem;
+  width: 100%;
+  border: 1px solid var(--GrayishBlue);
+  border-radius: 0.5rem;
+  outline: none;
+  font-weight: 600;
+}
+.form form button {
+  background-color: var(--Green);
+  color: white;
+  text-transform: uppercase;
+  padding: 26px 0;
+  border-radius: 0.5rem;
+  line-height: 0;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+}
+.form form p {
+  color: var(--GrayishBlue);
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1.75em;
+  padding: 0 1rem;
+  margin: 0;
+  margin-top: -0.25rem;
+}
+.form form p span {
+  color: var(--Red);
+  font-weight: 600;
+}
+
+.attribution {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0;
+}
+.attribution a {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
