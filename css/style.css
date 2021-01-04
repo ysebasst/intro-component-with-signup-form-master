@@ -57,8 +57,19 @@ main {
 .info p {
   line-height: 1.5em;
 }
+@media screen and (min-width: 1024px) {
+  .info {
+    text-align: left;
+  }
+  .info h1 {
+    font-size: 3rem;
+  }
+  .info p {
+    line-height: 1.75em;
+  }
+}
 
-.form h2 {
+.form-container h2 {
   background-color: var(--Blue);
   color: white;
   padding: 1.25rem 20%;
@@ -70,10 +81,10 @@ main {
   font-weight: 300;
   box-shadow: 0px 8px rgba(0, 0, 0, 0.2);
 }
-.form h2 span {
+.form-container h2 span {
   font-weight: 600;
 }
-.form form {
+.form-container #form {
   background-color: white;
   padding: 1.5rem;
   border-radius: 0.5rem;
@@ -81,7 +92,10 @@ main {
   gap: 1rem;
   box-shadow: 0px 8px rgba(0, 0, 0, 0.2);
 }
-.form form input {
+.form-container #form .form-control {
+  position: relative;
+}
+.form-container #form .form-control input {
   padding: 18px 1rem;
   width: 100%;
   border: 1px solid var(--GrayishBlue);
@@ -89,7 +103,28 @@ main {
   outline: none;
   font-weight: 600;
 }
-.form form button {
+.form-container #form .form-control input:focus {
+  border: 1px solid var(--DarkBlue) !important;
+}
+.form-container #form .form-control input.error {
+  border: 1px solid var(--Red);
+}
+.form-container #form .form-control .msg {
+  display: none;
+  text-align: right;
+  color: var(--Red);
+  font-style: italic;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+.form-container #form .form-control img {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.form-container #form button {
   background-color: var(--Green);
   color: white;
   text-transform: uppercase;
@@ -101,7 +136,7 @@ main {
   border: none;
   border-bottom: 4px solid rgba(0, 0, 0, 0.1);
 }
-.form form p {
+.form-container #form p {
   color: var(--GrayishBlue);
   text-align: center;
   font-size: 0.7rem;
@@ -110,9 +145,13 @@ main {
   margin: 0;
   margin-top: -0.25rem;
 }
-.form form p span {
+.form-container #form p span {
   color: var(--Red);
   font-weight: 600;
+}
+
+.show {
+  display: block !important;
 }
 
 .attribution {

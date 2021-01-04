@@ -28,13 +28,53 @@
             is invaluable.
           </p>
         </div>
-        <div class="form">
+        <div class="form-container">
           <h2><span>Try it free 7 days</span> then $20/mo. thereafter</h2>
-          <form>
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
-            <input type="email" placeholder="Email Address" />
-            <input type="password" placeholder="Password" />
+          <form id="form" novalidate>
+            <div class="form-control">
+              <input
+                id="first-name"
+                type="text"
+                placeholder="First Name"
+                autocomplete="off"
+                required
+              />
+              <span class="msg"></span>
+              <img src="images/icon-error.svg" alt="Icon Error" />
+            </div>
+            <div class="form-control">
+              <input
+                id="last-name"
+                type="text"
+                placeholder="Last Name"
+                autocomplete="off"
+                required
+              />
+              <span class="msg"></span>
+              <img src="images/icon-error.svg" alt="Icon Error" />
+            </div>
+            <div class="form-control">
+              <input
+                id="email"
+                type="email"
+                placeholder="Email Address"
+                autocomplete="off"
+                required
+              />
+              <span class="msg"></span>
+              <img src="images/icon-error.svg" alt="Icon Error" />
+            </div>
+            <div class="form-control">
+              <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                autocomplete="off"
+                required
+              />
+              <span class="msg"></span>
+              <img src="images/icon-error.svg" alt="Icon Error" />
+            </div>
             <button type="submit">Claim your free trial</button>
             <p>
               By clicking the button, you are agreeing to our
@@ -53,5 +93,6 @@
         >. Coded by <a href="https://github.com/ysebasst">Sebastian Sierra</a>.
       </p>
     </footer>
+    <script src="js/app.js"></script>
   </body>
 </html>

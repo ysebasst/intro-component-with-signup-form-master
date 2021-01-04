@@ -58,9 +58,18 @@ main {
   p {
     line-height: 1.5em;
   }
+  @media screen and (min-width: 1024px) {
+    text-align: left;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      line-height: 1.75em;
+    }
+  }
 }
 
-.form {
+.form-container {
   h2 {
     background-color: var(--Blue);
     color: white;
@@ -76,20 +85,44 @@ main {
       font-weight: 600;
     }
   }
-  form {
+  #form {
     background-color: white;
     padding: 1.5rem;
     border-radius: 0.5rem;
     display: grid;
     gap: 1rem;
     box-shadow: 0px 8px rgba(0, 0, 0, 0.2);
-    input {
-      padding: 18px 1rem;
-      width: 100%;
-      border: 1px solid var(--GrayishBlue);
-      border-radius: 0.5rem;
-      outline: none;
-      font-weight: 600;
+    .form-control {
+      position: relative;
+      input {
+        padding: 18px 1rem;
+        width: 100%;
+        border: 1px solid var(--GrayishBlue);
+        border-radius: 0.5rem;
+        outline: none;
+        font-weight: 600;
+        &:focus {
+          border: 1px solid var(--DarkBlue) !important;
+        }
+        &.error {
+          border: 1px solid var(--Red);
+        }
+      }
+      .msg {
+        display: none;
+        text-align: right;
+        color: var(--Red);
+        font-style: italic;
+        font-size: 0.75rem;
+        font-weight: 500;
+        margin-top: 0.5rem;
+      }
+      img {
+        display: none;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
     }
     button {
       background-color: var(--Green);
@@ -117,6 +150,10 @@ main {
       }
     }
   }
+}
+
+.show {
+  display: block !important;
 }
 
 .attribution {
